@@ -1,0 +1,34 @@
+ul[posters-horizontal] {
+  	overflow: hidden;
+  	padding: 0;
+  	white-space: nowrap;
+  	position: relative;
+    -webkit-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+    -ms-touch-action: pan-y;
+  	touch-action: pan-y;
+  	overflow-x: scroll;
+}
+ul[posters-horizontal] > li {
+    color: black;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: visible;
+    vertical-align: top;
+    /*position: absolute;*/
+    left: 0;
+    right: 0;
+    white-space: normal;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    /*width: 100%;*/
+    height: 100%;
+    display: inline-block; 
+}
+ul[posters-horizontal]::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}

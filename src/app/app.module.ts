@@ -15,8 +15,12 @@ import { App } from './app.component';
 import { MdModule } from './md.module';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState } from './app.service';
+import { TmdbService } from './shared/tmdb.service';
 import { Home } from './home';
 import { About } from './about';
+import { PopularMovies } from './shared/popular-movies';
+import { ToolbarMovies } from './shared/toolbar-movies';
+import { SearchMovies } from './shared/search-movies';
 import { NoContent } from './no-content';
 
 // Import diretives
@@ -25,7 +29,8 @@ import { XLarge } from './home/x-large';
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
-  AppState
+  AppState,
+  TmdbService
 ];
 
 /**
@@ -38,6 +43,9 @@ const APP_PROVIDERS = [
     About,
     Home,
     NoContent,
+    PopularMovies,
+    ToolbarMovies,
+    SearchMovies,
     XLarge
   ],
   imports: [ // import Angular's modules
